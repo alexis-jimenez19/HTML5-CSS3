@@ -1,43 +1,49 @@
 # HTML5-CSS3
-`<!DOCTYPE html>`
-
-`<html lang="en">`
-
-`<head>`
-
-     <meta charset="UTF-8">
-
-     <title>HTML5-CSS3</title>
-
-     <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon" />
-
-`</head>`
-
-`<body>`
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime facere, accusantium aliquid assumenda nisi ipsum temporibus. Iste, doloremque quas autem alias tenetur dolor velit odit. Doloremque, explicabo, facilis! Asperiores, quis.
-
-`</body>`
-
-`</html>`
+##Semantica de HTML(el marcado y su significado)
+* HTML no define como debería aparecer el contenido en el navegador. Esto le toca a las Hojas de Estilos en Cascada(CSS).
 
 
-* Todo lo que se encuentra arriba de la etiqueta body es solo información de instrucciones para los navegadores.
+* La razón por la cual aparece con cierto formato aunque no tenga alguna hoja de estilo es debido a que cada navegador tiene un archivo de css la cual indica como se deberían de mostrar cada uno de los elementos de manera predeterminada. En dado caso de que se cree una hoja de estilos propias esta podrá sobrescribir estos estilos predeterminados.
 
 
-* Podemos notar que la etiqueta `<!DOCTYPE html>` se refiere solamente a la versión de HTML que estamos utilizando que en este caso indicamos el uso de HTML5
+* Donde podemos notar de manera clara lo que al anterior punto se refiere seria necesario crear elementos desde h1 al h6 ademas de 2 párrafos y por ultimo un texto dentro de la etiqueta em, debido a que notaras que el la hoja de estilo predeterminada de un navegador renderiza cada etiqueta de manera diferente.
+
+### Nivel bloque o nivel en línea
+* Nivel bloque (Block level ) era el nombre que se tenia para aquellos elementos de HTML los cuales se mostraban en su propia linea lo cuales por default se nota como un si fuese un salto de linea entre los elementos en este caso podemos ver los H1 y H2 los cuales están en diferente linea siendo que en ambos les sobra un espacio.
+
+* En linea (Inline) estos son los elementos que se muestra de manera que están dentro de la linea ejemplo observamos que si ubicamos texto dentro de una etiqueta `<em>``</em> ` y este elemento lo escribimos dentro de un elemento `<p>` `</p>` entonces el elemento em ocupara el espacio que requieren las palabras dentro y no aparecerá un salto de linea
+
+   ` <p>`
+
+        Texto del parrafo blablablablabla
+
+        <em> dentro de em </em>
+
+        continuación de texto dentro del elemento p
+
+    `</p>`
+
+En HTML5 los elementos **inline** ahora son nombrados "phrasing content" contenido de fraseo, los cuales son principalmente encontrados dentro de párrafos.
 
 
-* La siguiente etiqueta `<html lang="en">` nos menciona que el lenguaje predeterminado de esta pagina es en inglés.
+### HTML5 enfoque a la semántica
 
+HTML5 elimina algunos elementos de presentación y re-define otros para que solamente tuvieran **valor semántico**.
 
-* La siguiente etiqueta  `<meta charset="UTF-8">` nos proporciona la información de que UTF-8 (8-bit Unicode Transformation Format) es un formato de codificación de caracteres Unicode e ISO 10646 utilizando símbolos de longitud variable. Este tipo de codificación de caracteres acepta todos los posibles caracteres, como uno de ellos es el acento.
+Algunos nuevos elementos de HTML5 son **header**, **footer**, **nav**, **article** and **section**.
 
+El objetivo de usar HTML5 es usar todos los elementos aunque sean elementos que se han observado desde antes solo teniendo en cuenta el seleccionar los elementos que mejor describen el significado de el contenido sin considerar la presentación.
 
-* La siguiente etiqueta `<title>HTML5-CSS3</title>` si miras en una pagina web en la pestaña de tu explorador aparece un titulo. Entonces lo que escribas dentro de esta etiqueta es lo que aparecerá en la pestaña. Recordemos que esta información de titulo es de valor para los buscadores.
+De vez en cuando, estarás pensando que una pieza de contenido podría ser marcada en mas de una manera posible, y esta bien. No siempre es una correcta manera o una mala.
 
+HTML5 no provee todos los tipos de elementos existentes pero si abarca la mayoría.
 
-* La siguiente etiqueta `<link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon" />` nos indica que el archivo logo.ico es el que aparecerá en el lado izquierdo de la pestaña a un lado de el titulo.
+### Por que la semántica importa?
 
+* Mejora la accesibilidad y la inter-operabilidad
+* Mejora la optimizacion de busqueda. Search Engine Optimization(SEO).
+* Tipicamente codigo mas ligero y paginas mas rapidas.
+* Mejor codigo de mantenimiento y estilo.
 
-* Ahora bien todo lo que se encuentra de la etiqueta de apertura y cerradura `<body>` `</body>` es lo que aparecera en nuestro navegador web como contenido.
+"El poder de la Web se encuentra en la universalidad. Acceso por todos sin considerar la des-habilidad es un aspecto  esencial."
+-"Tim Berners-Lee".Translation created by Alexis Jiménez.
