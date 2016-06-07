@@ -1,57 +1,54 @@
 # HTML5-CSS3
-## Elementos
+## Contenido de Texto de una pagina Web
 
-Son aquellas etiquetas que describen las diferentes partes de la pagina Web.
-Existen elementos que vacíos y otros que no.
+Cuando el navegador renderiza HTML este colapsa espacios o tabulaciones extras en una sola linea resolviéndolo como un soloo espacio ademas de ignorar los saltos de linea.
 
-### Elementos vacíos
+Vamos a hacer un mini ejemplo:
 
-Son aquellos elementos que se describen como el siguiente
+   `<p>`
 
-      `<img />`
+        Notas que
 
-Este tipo de elementos no contienen texto.
+        si tengo saltos de linea no se muestran en
 
-### Elementos no vacíos
+        el navegador web.
 
-Son aquellos elementos que contienen texto los cuales tienen una etiqueta de aapretura y otra de cerradura.
+  `</p>`
 
-Se describen como el siguiente.
+Si agregamos esto en un documento con la extensión .html y lo abrimos en algún navegador web notaras que sucede.
 
-       `<em> Aqui puede ir texto </em>`
+## Etiqueta HEAD
 
-Note que en la **etiqueta de apertura** se escribe primero el símbolo menor que seguido de el nombre de la etiqueta y por ultimo el símbolo de mayor que. La **etiqueta de cerradura** en cambio consta de una diagonal después de el menor que. <**/**em>
+Es una practica estandar codificar las paginas con el set de caracteres UTF-8 el cual permite utilizar todos los caracteres  American Standard Code for Information Interchange(ASCII).
 
+`<head>`
 
-## Atributos y Valores de Marcado
+    <meta charset="UTF-8">
 
-Los atributos contienen información acerca del contenido en el documento. El valor del atributo en HTML5 podría ser encerrado en comillas dobles, y así se seguirá viendo durante el curso.
+    <title>Document</title>
 
-`<a href="http://www.google.com"> Texto del link que te dirige a google.com</a>`
+`</head>`
 
-en este caso. `<a` **href**="_http_"`>` lo marcado en negritas es el atributo  y el texto en italicas que se encuentra dentro de las comillas dobles se refiere al valor de dicho atributo.
+## Referencia de entidades de caracteres en HTML4
 
-## Padres e hijos
+Aun se siguen utilizando en HTML5 entidades de caracteres que se usaban en HTML4
 
-Si un elemento contiene otro elemento dentro a este segundo se le llama hijo y al primero se le llama padre.
+Como es el simbolo de copyright o caracteres especiales
 
-Supongamos el siguiente ejemplo:
+Ejemplo:
 
-    `<a href="">
+`&szlig;` el cual es el siguiente caracter ß
 
-        <img src="" alt="">
+`&copy;` el cual es el siguiente caracter ©
 
-     </a>`
+`&eacute;` el cual es el siguiente caracter é
 
-el elemento a es el padre, y el elemento img es el hijo del elemento a.
+Aqui agrego el footer de nuestra pagina
 
-En el siguiente ejemplo notaras que los elementos no están anidados correctamente.
-  `<a href="">
+`   <footer>`
 
-        <p>
+        &copy Alexis Miguel Jim&eacutenez Olivares <br/>
 
-       </a>
+        &copy Alexis Miguel Jiménez Olivares
 
-    </p>`
-
-Debes de tener cuidado de anidarlos correctamente.
+`    </footer>`
